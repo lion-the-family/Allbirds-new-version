@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  box-sizing: border-box; }
+
+ul,
+li,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+:root {
+  --black: #212A2F;
+  --white: #FFFFFF;
+  --gray: #F2F3F4; }
+  :root .wrapper .header__list .header__link, .wrapper .header__list :root .header__link {
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    transition: 0.6s;
+    list-style: none; }
+
+.wrapper .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: var(--gray); }
+
+.wrapper .header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; }
+
+.wrapper .header__body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px; }
+
+.wrapper .container {
+  max-width: 1440px; }
+
+.wrapper .header_logo {
+  flex: 0 0 120px;
+  margin-left: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 3; }
+  .wrapper .header_logo img {
+    max-width: 100%;
+    display: block; }
+
+.wrapper .header__list {
+  display: flex;
+  position: relative;
+  z-index: 2; }
+  .wrapper .header__list .header__link {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: var(--black);
+    transition: all 0.5s; }
+  .wrapper .header__list .header__link:hover {
+    color: #AED6F1; }
+
+.wrapper .header__burger {
+  display: none; }
+
+@media (max-width: 768px) {
+  .wrapper .header__burger {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    margin-right: 20px; }
+    .wrapper .header__burger span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: var(--black);
+      width: 100%;
+      height: 2px;
+      top: 9px;
+      transition: all 0.3s ease 0s; }
+  .wrapper .header_logo {
+    flex: 0 0 80px; }
+  .wrapper .header__burger::before,
+  .wrapper .header__burger::after {
+    content: '';
+    position: absolute;
+    background-color: var(--black);
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s; }
+  .wrapper .header__burger::before {
+    top: 0; }
+  .wrapper .header__burger::after {
+    bottom: 0; }
+  .wrapper .header__burger.active span {
+    transform: scale(0); }
+  .wrapper .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 9px; }
+  .wrapper .header__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px; }
+  .wrapper .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--gray);
+    padding: 70px 0px 0px 0px;
+    transition: all 0.5s ease 0s; }
+  .wrapper .header__menu.active {
+    top: 0; }
+  .wrapper .header__list {
+    display: block; }
+    .wrapper .header__list li {
+      margin: 0px 0px 20px 0px; }
+  .wrapper .header__link {
+    transition: all 0.5s; }
+  .wrapper .header__link:hover {
+    color: #AED6F1; } }
+
+.content {
+  max-width: 100%;
+  max-height: 100%; }
+  .content .img-person-window {
+    max-width: 100%;
+    max-height: 740px;
+    background-size: cover;
+    margin-top: 50px; }
+  .content .header-text-our {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: var(--black);
+    margin-top: 120px; }
+  .content .container-block {
+    max-width: 1236px;
+    height: 515px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .content .container-block-img {
+    max-width: 100%;
+    max-height: 515px; }
+  .content .img-shop-shoes {
+    max-width: 100%;
+    max-height: 396px;
+    border-radius: 2%;
+    transition: transform 2s; }
+  .content .img-shop-shoes:hover {
+    transform: scale(0.9); }
+  .content .container-block-text-and-icon {
+    width: 336px;
+    height: 81px;
+    margin: 0 auto; }
+    .content .container-block-text-and-icon h3 {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 29px;
+      letter-spacing: 0.5px;
+      color: var(--black); }
+    .content .container-block-text-and-icon .span {
+      width: 336px;
+      height: 1px;
+      background: #D3D4D5; }
+    .content .container-block-text-and-icon .icon__text {
+      display: flex;
+      align-items: center; }
+      .content .container-block-text-and-icon .icon__text img {
+        width: 30px;
+        height: 30px; }
+      .content .container-block-text-and-icon .icon__text p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.4px;
+        margin-left: 12px; }
+  @media (max-width: 1236px) {
+    .content .container-block-img {
+      max-width: 280px;
+      max-height: 280px;
+      display: block;
+      margin-left: 20px;
+      margin-right: 20px; }
+    .content .container-block {
+      max-width: 1000px;
+      max-height: 320px; }
+    .content .container-block-text-and-icon {
+      width: 336px;
+      height: 81px;
+      margin: 0 auto; }
+      .content .container-block-text-and-icon h3 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 29px;
+        letter-spacing: 0.5px;
+        color: var(--black); }
+      .content .container-block-text-and-icon .span {
+        width: 250px;
+        height: 1px;
+        background: #D3D4D5; }
+      .content .container-block-text-and-icon .icon__text {
+        max-width: 250px; } }
+  @media (max-width: 1076px) {
+    .content .container-block-img {
+      margin-top: 30px; }
+    .content .container-block {
+      max-width: 100px;
+      max-height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .content .img-shop-shoes {
+      width: 100%;
+      min-height: 100%; }
+    .content .container-block-text-and-icon {
+      width: 336px;
+      height: 81px;
+      margin: 0 auto; }
+      .content .container-block-text-and-icon h3 {
+        display: inline-block; }
+      .content .container-block-text-and-icon .span {
+        width: 180px;
+        height: 1px;
+        background: #D3D4D5; }
+      .content .container-block-text-and-icon .icon__text {
+        min-width: 180px; }
+        .content .container-block-text-and-icon .icon__text img {
+          width: 15px;
+          height: 15px; }
+        .content .container-block-text-and-icon .icon__text p {
+          font-size: 8px;
+          display: inline-block; } }
+  @media (max-width: 994px) {
+    .content .container-block {
+      max-width: 1236px;
+      height: 515px;
+      display: block; }
+    .content .container-block-img {
+      max-width: 380px;
+      max-height: 515px;
+      margin: 0 auto;
+      margin-top: 60px; }
+    .content .img-shop-shoes {
+      max-width: 100%;
+      max-height: 396px; }
+    .content .container-block-text-and-icon {
+      width: 336px;
+      height: 81px;
+      margin: 0 auto; }
+      .content .container-block-text-and-icon h3 {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 29px;
+        letter-spacing: 0.5px;
+        color: var(--black); }
+      .content .container-block-text-and-icon .span {
+        width: 336px;
+        height: 1px;
+        background: #D3D4D5; }
+      .content .container-block-text-and-icon .icon__text {
+        display: flex;
+        align-items: center; }
+        .content .container-block-text-and-icon .icon__text img {
+          width: 30px;
+          height: 30px; }
+        .content .container-block-text-and-icon .icon__text p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.4px;
+          margin-left: 12px; } }
+  @media (max-width: 425px) {
+    .content .container-block-img {
+      max-width: 100%;
+      max-height: 515px;
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-left: 5px;
+      margin-right: 5px; }
+    .content .header-text-our {
+      font-size: 28px; }
+    .content .img-shop-shoes {
+      width: 100%; }
+    .content .container-block-text-and-icon {
+      max-width: 80%;
+      height: 81px;
+      margin: 0 auto; }
+      .content .container-block-text-and-icon h3 {
+        font-size: 16px; }
+      .content .container-block-text-and-icon .span {
+        max-width: 80%;
+        height: 1px;
+        background: #D3D4D5; }
+      .content .container-block-text-and-icon .icon__text {
+        display: flex;
+        align-items: center; }
+        .content .container-block-text-and-icon .icon__text img {
+          width: 15px;
+          height: 15px; }
+        .content .container-block-text-and-icon .icon__text p {
+          font-weight: 400;
+          font-size: 9px;
+          line-height: 20px; } }
+  .content .block-content {
+    max-width: 100%; }
+    .content .block-content .girlpage {
+      width: 100%;
+      margin-top: 60px; }
+    .content .block-content .block-text-content {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center; }
+    .content .block-content .text-content-bnt {
+      max-width: 666px;
+      min-height: 200px; }
+      .content .block-content .text-content-bnt h3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: 0.5px;
+        color: var(--black); }
+      .content .block-content .text-content-bnt p {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px; }
+    .content .block-content .block-btn .button {
+      width: 180px;
+      height: 48px;
+      border: 1px solid var(--white);
+      background-color: var(--black);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: var(--white);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition: all 0.5s;
+      border-radius: 10%; }
+    .content .block-content .block-btn .button:hover {
+      transform: translateY(5px);
+      box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25); }
+  @media (max-width: 1236px) {
+    .content .block-content {
+      margin-top: 60px; } }
+  @media (max-width: 1076px) {
+    .content .block-content {
+      margin-top: 100px; } }
+  @media (max-width: 994px) {
+    .content .block-content {
+      margin-top: 1300px; } }
+  @media (max-width: 425px) {
+    .content .block-content {
+      margin-top: 1200px; } }
+  @media (max-width: 377px) {
+    .content .block-content {
+      margin-top: 1100px; } }
+  @media (max-width: 330px) {
+    .content .block-content {
+      margin-top: 1000px; } }
+  @media (max-width: 320px) {
+    .content .block-content {
+      margin-top: 950px; }
+      .content .block-content .text-content-bnt {
+        max-width: 666px;
+        min-height: 200px; }
+        .content .block-content .text-content-bnt h3 {
+          font-size: 20px; }
+        .content .block-content .text-content-bnt p {
+          font-size: 10px; }
+      .content .block-content .block-btn .button {
+        max-width: 140px;
+        height: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 10px; } }
+  .content .section {
+    max-width: 100%;
+    min-height: 355px;
+    margin-top: 100px; }
+    .content .section .section-content {
+      max-width: 888px;
+      min-height: 355px;
+      margin: 0 auto;
+      text-align: center; }
+    .content .section .section-content-text {
+      max-width: 840px;
+      min-height: 149px;
+      margin: 0 auto; }
+      .content .section .section-content-text h3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: 0.5px;
+        color: var(--black); }
+      .content .section .section-content-text p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        color: var(--black); }
+    .content .section .section-input-and-btn {
+      max-width: 840px;
+      display: flex;
+      margin: 0 auto;
+      margin-top: 30px; }
+      .content .section .section-input-and-btn .input {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+        outline: none;
+        padding-left: 15px; }
+      .content .section .section-input-and-btn .input::placeholder {
+        font-size: 16px; }
+      .content .section .section-input-and-btn .btn {
+        background-color: var(--black);
+        width: 150px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--white);
+        border: 1px solid var(--white);
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 10%;
+        transition: all 0.5s; }
+      .content .section .section-input-and-btn .btn:hover {
+        transform: translateY(5px);
+        box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25); }
+      @media (max-width: 320px) {
+        .content .section .section-input-and-btn .section-content-text {
+          max-width: 320px;
+          margin-left: 5px;
+          margin-right: 5px; }
+          .content .section .section-input-and-btn .section-content-text h3 {
+            font-size: 25px; }
+          .content .section .section-input-and-btn .section-content-text p {
+            font-size: 12px; }
+        .content .section .section-input-and-btn .section-input-and-btn {
+          max-width: 320px;
+          height: 32px; }
+          .content .section .section-input-and-btn .section-input-and-btn .input::placeholder {
+            font-size: 10px; }
+          .content .section .section-input-and-btn .section-input-and-btn .input {
+            height: 30px; }
+          .content .section .section-input-and-btn .section-input-and-btn .btn {
+            font-size: 10px; } }
+  .content .footer {
+    width: 100%;
+    background-color: var(--black);
+    display: flex; }
+  @media (max-width: 768px) {
+    .content .footer {
+      display: block; } }
+  .content .footer-content-list {
+    max-width: 320px;
+    margin-left: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    .content .footer-content-list h3 {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-top: 10px; }
+    .content .footer-content-list li {
+      margin-bottom: 10px;
+      margin-top: 10px; }
+    .content .footer-content-list a {
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      color: var(--white);
+      transition: all 0.7s; }
+    .content .footer-content-list a:hover {
+      color: #aed6f1; }
